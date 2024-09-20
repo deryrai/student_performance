@@ -1,0 +1,41 @@
+URL Acuan : https://www.kaggle.com/datasets/lainguyn123/student-performance-factors
+
+# Syntax DDL
+
+CREATE TABLE table_m3 (
+	"Hours_Studied"				INTEGER,
+	"Attendance"				INTEGER,
+	"Parental_Involvement"		VARCHAR,
+	"Access_to_Resources"		VARCHAR,
+	"Extracurricular_Activities"	VARCHAR,
+	"Sleep_Hours"				INTEGER,
+	"Previous_Scores"			INTEGER,
+	"Motivation_Level"			VARCHAR,
+	"Internet_Access"			VARCHAR,
+	"Tutoring_Sessions"			INTEGER,
+	"Family_Income"				VARCHAR,
+	"Teacher_Quality"			VARCHAR,
+	"School_Type"				VARCHAR,
+	"Peer_Influence"			VARCHAR,
+	"Physical_Activity"			INTEGER,
+	"Learning_Disabilities"		VARCHAR,
+	"Parental_Education_Level"	VARCHAR,
+	"Distance_From_Home"		VARCHAR,
+	"Gender"					VARCHAR,
+	"Exam_Score"				INTEGER
+);
+
+
+
+# Syntax DML
+COPY table_m3(
+	"Hours_Studied", "Attendance", "Parental_Involvement", "Access_to_Resources", 
+	"Extracurricular_Activities", "Sleep_Hours", "Previous_Scores", "Motivation_Level", 
+	"Internet_Access", "Tutoring_Sessions", "Family_Income", "Teacher_Quality", 
+	"School_Type", "Peer_Influence", "Physical_Activity", "Learning_Disabilities", 
+	"Parental_Education_Level", "Distance_From_Home", "Gender", "Exam_Score"
+)
+FROM '/tmp/P2M3_Dery_data_raw.csv'
+DELIMITER ','
+CSV HEADER;
+
